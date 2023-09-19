@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Voto por Idade</title>
+</head>
+<body>
+  <h1>Média Aritimétida Nota</h1>
+  <h2>Esse aluno está:</h2><br/>
+  <div id="situacao"></div>
+    
+    </br>
+    <h2>Média:</h2><br/>
+    <div id="media"></div>
+    <h2>Aluno:</h2><br/>
+    <div id="aluno"></div>
+    <h2>Professor:</h2><br/>
+    <div id="professor"></div>
+
+  
+  <script>
+    var nota1 = prompt("Digite primeira nota");
+    var nota2 = prompt("Digite segunda nota");
+    var nota3 = prompt("Digite terceira nota");
+    var aluno = prompt("Digite o nome do aluno");
+    var professor = prompt("Digite o nome do professor");
+    var media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3))/3;
+    
+    var situacao;
+    
+    if(media < 4){
+        situacao = "Retido"
+    }
+    if(media >= 4 && media <= 6){
+        situacao = "Recuperação"
+    }
+    if(media > 6){
+        situacao = "Aprovado"
+    }
+    
+    document.getElementById("situacao").innerHTML = situacao;
+    document.getElementById("media").innerHTML = media;
+    document.getElementById("aluno").innerHTML = aluno;
+    document.getElementById("professor").innerHTML = professor;
+
+
+  </script>
+</body>
+</html>
